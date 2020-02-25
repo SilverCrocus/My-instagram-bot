@@ -6,7 +6,8 @@ import urllib.request
 import urllib3
 import urllib3.request
 import os
-import csv
+from details import username
+from details import password
 
 
 
@@ -107,7 +108,6 @@ class InstaBot:
     def donwload_images(self):
         self.search_user()
         images_src = []
-        video_src = []
         name = input("Type folder path: ")
         folder_name = name
         if not os.path.exists(folder_name):
@@ -140,8 +140,6 @@ class InstaBot:
 
         
 
-username = input("Username: ")
-password = input("Password: ")
 mybot = InstaBot(username, password)
 mybot.user_action()
 print("Goodbye")
